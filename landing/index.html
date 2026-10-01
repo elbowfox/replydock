@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReplyDock — canned replies that insert anywhere</title>
+  <meta name="description" content="ReplyDock is a Chrome extension for support, sales, and founders. Save replies, fill variables, paste into any text field." />
+  <style>
+    :root { color-scheme: dark; --bg:#10160f; --card:#1b2418; --line:#2d3b29; --text:#f6f3ea; --muted:#a7b0a0; --amber:#f5a623; --ink:#1a1408; }
+    * { box-sizing: border-box; }
+    body { margin:0; font: 17px/1.5 Georgia, "Iowan Old Style", serif; background: var(--bg); color: var(--text); }
+    header, main, footer { max-width: 880px; margin: 0 auto; padding: 28px 20px; }
+    nav { display:flex; justify-content:space-between; align-items:center; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }
+    .logo { font-weight: 700; letter-spacing: 0.04em; }
+    a.btn, button.btn { background: var(--amber); color: var(--ink); text-decoration:none; padding: 10px 14px; border-radius: 999px; font-family: "Segoe UI", system-ui, sans-serif; font-weight: 700; }
+    h1 { font-size: 56px; line-height: 0.95; margin: 28px 0 12px; font-weight: 500; }
+    .lede { font-size: 22px; color: var(--muted); max-width: 640px; }
+    .grid { display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; margin-top: 28px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+    .price { font-family: "Segoe UI", system-ui, sans-serif; font-size: 40px; margin: 0; }
+    ul { padding-left: 18px; }
+    .sans { font-family: "Segoe UI", system-ui, sans-serif; }
+    footer { color: var(--muted); font-size: 14px; font-family: "Segoe UI", system-ui, sans-serif; }
+    @media (max-width: 720px) { h1 { font-size: 40px; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <span class="logo">ReplyDock</span>
+      <a class="btn" href="#buy">Get Pro</a>
+    </nav>
+    <h1>Stop retyping the same reply.</h1>
+    <p class="lede">Save the messages you already send. Fill the name, amount, or date. Insert them into Gmail, LinkedIn, help desks, and any other text field.</p>
+  </header>
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2>What it does</h2>
+        <ul>
+          <li>Library of replies with search and categories</li>
+          <li>Variables like {{name}} and {{amount}} filled at insert time</li>
+          <li>Works in normal text fields and most editors</li>
+          <li>Export and import, so a second computer is not a reset</li>
+          <li>Free for 10 replies. Pro removes the cap.</li>
+        </ul>
+      </section>
+      <section class="card" id="buy">
+        <p class="price">$29</p>
+        <p class="sans">One-time Pro license. No account. Paste the key in Settings.</p>
+        <p class="sans"><a class="btn" id="checkout" href="https://gumroad.com/">Buy on Gumroad</a></p>
+        <p class="sans">Replace this link with your Gumroad or Lemon Squeezy product URL after you create it.</p>
+      </section>
+    </div>
+    <section class="card" style="margin-top:16px">
+      <h2>Install</h2>
+      <ol>
+        <li>Unzip the extension folder.</li>
+        <li>Open chrome://extensions and turn on Developer mode.</li>
+        <li>Load unpacked and choose the replydock folder.</li>
+        <li>For the public listing, zip the folder and upload it to the Chrome Web Store.</li>
+      </ol>
+    </section>
+    <section class="card" id="privacy" style="margin-top:16px">
+      <h2>Privacy</h2>
+      <p>ReplyDock stores templates, variables, and the license key in Chrome local storage on your machine. It does not send replies, page contents, or keys to a server. Insert works only after you click Insert, on the tab you are using. There is no account and no analytics in this build.</p>
+    </section>
+  </main>
+  <footer>
+    <p>ReplyDock is a local tool. A license key is a purchase receipt, not a subscription unless you choose to sell it that way.</p>
+  </footer>
+</body>
+</html>

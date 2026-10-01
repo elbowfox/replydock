@@ -1,0 +1,80 @@
+:root {
+  color-scheme: dark;
+  --bg: #111810;
+  --panel: #1b2418;
+  --line: #2c3a28;
+  --text: #f4f1e8;
+  --muted: #a3ad9b;
+  --amber: #f5a623;
+  --amber-ink: #1a1408;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 380px;
+  min-height: 460px;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.4 "Segoe UI", system-ui, sans-serif;
+}
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+header { border-bottom: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); gap: 8px; }
+.brand { display: flex; gap: 10px; align-items: center; }
+.brand strong { display: block; letter-spacing: 0.02em; }
+.brand small { color: var(--amber); }
+.mark {
+  width: 32px; height: 32px; border-radius: 8px;
+  display: grid; place-items: center;
+  background: var(--amber); color: var(--amber-ink); font-weight: 700;
+}
+button, input, textarea {
+  font: inherit; color: inherit;
+}
+button {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+button.primary { background: var(--amber); color: var(--amber-ink); border-color: transparent; font-weight: 650; }
+#options { width: 34px; height: 34px; }
+#search, input, textarea {
+  width: calc(100% - 28px);
+  margin: 10px 14px 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 10px;
+}
+textarea { min-height: 110px; resize: vertical; }
+#list { padding: 8px 10px 12px; max-height: 340px; overflow: auto; }
+.card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 6px 4px;
+}
+.card h3 { margin: 0 0 4px; font-size: 13px; }
+.meta { color: var(--muted); font-size: 11px; margin-bottom: 6px; }
+.preview {
+  color: #d7dccf;
+  white-space: pre-wrap;
+  max-height: 48px;
+  overflow: hidden;
+}
+.actions { display: flex; gap: 6px; margin-top: 8px; }
+.actions button { padding: 5px 8px; font-size: 12px; }
+.hidden { display: none; }
+.composer { padding-bottom: 10px; }
+.row { display: flex; justify-content: flex-end; gap: 8px; padding: 10px 14px 0; }
+#count { color: var(--muted); font-size: 12px; }
+.empty { color: var(--muted); padding: 20px 8px; text-align: center; }
+.lock { opacity: 0.55; }

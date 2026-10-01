@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ReplyDock settings</title>
+  <link rel="stylesheet" href="popup.css" />
+  <style>
+    body { width: 640px; max-width: 100%; margin: 0 auto; padding: 28px 20px 60px; }
+    h1 { font-size: 28px; margin-bottom: 4px; }
+    p { color: var(--muted); }
+    label { display: block; margin: 16px 0 6px; }
+    input, textarea { width: 100%; margin: 0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .ok { color: #b6e3a8; }
+    .bad { color: #ffb4a8; }
+  </style>
+</head>
+<body>
+  <h1>ReplyDock</h1>
+  <p id="status">Free plan · 10 replies.</p>
+  <label>Pro license key</label>
+  <input id="key" placeholder="RD-XXXX-XXXX-XXXX-XXXXXXXX" />
+  <div class="row" style="padding-left:0">
+    <button id="unlock" class="primary">Unlock Pro</button>
+    <button id="clear">Remove license</button>
+  </div>
+  <p id="msg"></p>
+  <h2>Default variables</h2>
+  <div class="grid">
+    <input id="me" placeholder="Your name {{me}}" />
+    <input id="company" placeholder="Company {{company}}" />
+  </div>
+  <h2>Backup</h2>
+  <div class="row" style="padding-left:0">
+    <button id="export">Export JSON</button>
+    <button id="import">Import JSON</button>
+  </div>
+  <input id="file" type="file" accept="application/json" hidden />
+  <script src="defaults.js"></script>
+  <script src="license.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

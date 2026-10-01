@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReplyDock</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="mark">RD</span>
+      <div>
+        <strong>ReplyDock</strong>
+        <small id="plan">Free</small>
+      </div>
+    </div>
+    <button id="options" title="Settings">⚙</button>
+  </header>
+  <input id="search" type="search" placeholder="Search replies" autocomplete="off" />
+  <div id="list"></div>
+  <form id="composer" class="composer hidden">
+    <input id="title" placeholder="Title" required />
+    <input id="category" placeholder="Category" value="General" />
+    <textarea id="body" placeholder="Reply body. Use {{name}} style variables." required></textarea>
+    <div class="row">
+      <button type="button" id="cancel">Cancel</button>
+      <button type="submit" class="primary">Save</button>
+    </div>
+  </form>
+  <footer>
+    <button id="add" class="primary">New reply</button>
+    <span id="count"></span>
+  </footer>
+  <script src="defaults.js"></script>
+  <script src="license.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
